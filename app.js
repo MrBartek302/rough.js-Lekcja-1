@@ -24,7 +24,6 @@ const svg = document.getElementById("svg");
 
 var glob_y = 10;
 var glob_x = 800;
-
 //elipsa
 const elipsa = roughsvg.ellipse(glob_x + 150, glob_y + 50, 300, 100, {
   fill: "green",
