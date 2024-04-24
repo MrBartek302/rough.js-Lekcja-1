@@ -70,6 +70,7 @@ function tworzenie(x, y) {
   );
   svg.appendChild(line);
   glob_y = glob_y + 130;
+  console.log(`X = ${glob_x}, Y = ${glob_y} `);
 }
 
 const buttonik1 = document.getElementById("button1");
