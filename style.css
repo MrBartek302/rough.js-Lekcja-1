@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+#gora {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  height: 80vh;
+}
+
+#dol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+}
+
+#svg {
+  width: 100%;
+  height: 100%;
+}
+
+#button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 20px;
+  border: 3px solid white;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  height: 45px;
+  width: 180px;
+}
+
+#button:hover {
+  background-color: rgb(88, 4, 90);
+}
+
+#button1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 20px;
+  border: 3px solid white;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  height: 45px;
+  width: 180px;
+}
+
+#button1:hover {
+  background-color: rgb(88, 4, 90);
+}
