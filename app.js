@@ -70,28 +70,40 @@ function tworzenie(x, y) {
   );
   svg.appendChild(line);
   glob_y = glob_y + 130;
-  console.log(`X = ${glob_x}, Y = ${glob_y} `);
+  console.log(`X = ${glob_x}, Y = ${glob_y}`);
 }
 
 const buttonik1 = document.getElementById("button1");
 buttonik1.addEventListener("click", () => {
-  diament(glob_x, glob_y);
+  Drawdiamond(glob_x, glob_y);
 });
 
-function diament(x, y) {
-  const romb = roughsvg.rectangle(
+function Drawdiamond(x, y) {
+  a = 100 / Math.sqrt(2);
+  d = 100;
+  x = glob_x + 150 - a / 2;
+  y = glob_y + (d / 2 - a / 2);
+
+  const test = roughsvg.rectangle(x, y, a, a, {
+    fill: "rgb(10,150,10)",
+    fillWeight: 3,
+  });
+
+  test.setAttribute("transform", `rotate(45, ${x + a / 2}, ${y + a / 2})`);
+
+  test.addEventListener("click", () => {
+    console.log("click");
+  });
+  svg.appendChild(test);
+  console.log(`Global X = ${glob_x}, Global Y = ${glob_y}`);
+
+  const line = roughsvg.line(
     glob_x + 150,
     glob_y + 100,
-    100 / Math.sqrt(2),
-    100 / Math.sqrt(2),
-    {
-      fill: "pink",
-      fillStyle: "solid",
-    }
+    glob_x + 150,
+    glob_y + 100 + 30
   );
-  romb.addEventListener("click", () => {
-    console.log("klik romba!");
-  });
-  svg.appendChild(romb);
-  glob_y = glob_y + 80;
+  svg.appendChild(line);
+
+  glob_y = glob_y + 130;
 }
