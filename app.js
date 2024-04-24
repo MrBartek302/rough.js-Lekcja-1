@@ -27,7 +27,7 @@ var glob_x = 800;
 
 //elipsa
 const elipsa = roughsvg.ellipse(glob_x + 150, glob_y + 50, 300, 100, {
-  fill: "pink",
+  fill: "rgb(88, 4, 90)",
   fillStyle: "solid",
 });
 elipsa.addEventListener("click", () => {
@@ -53,7 +53,7 @@ buttonik.addEventListener("click", () => {
 //prostokąt
 function tworzenie(x, y) {
   const prostokat = roughsvg.rectangle(x, y, 300, 100, {
-    fill: "pink",
+    fill: "red",
     fillStyle: "solid",
   });
   prostokat.addEventListener("click", () => {
@@ -84,7 +84,7 @@ function diament(x, y) {
   x = glob_x + 150 - a / 2;
   y = glob_y + (d / 2 - a / 2);
   const romb = roughsvg.rectangle(x, y, a, a, {
-    fill: "pink",
+    fill: "red",
     fillStyle: "solid",
   });
 
