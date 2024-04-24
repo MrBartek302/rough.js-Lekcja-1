@@ -27,7 +27,7 @@ var glob_x = 800;
 
 //elipsa
 const elipsa = roughsvg.ellipse(glob_x + 150, glob_y + 50, 300, 100, {
-  fill: "rgb(88, 4, 90)",
+  fill: "green",
   fillStyle: "solid",
 });
 elipsa.addEventListener("click", () => {
@@ -53,7 +53,7 @@ buttonik.addEventListener("click", () => {
 //prostokąt
 function tworzenie(x, y) {
   const prostokat = roughsvg.rectangle(x, y, 300, 100, {
-    fill: "red",
+    fill: "darkorange",
     fillStyle: "solid",
   });
   prostokat.addEventListener("click", () => {
@@ -84,7 +84,7 @@ function diament(x, y) {
   x = glob_x + 150 - a / 2;
   y = glob_y + (d / 2 - a / 2);
   const romb = roughsvg.rectangle(x, y, a, a, {
-    fill: "red",
+    fill: "darkorange",
     fillStyle: "solid",
   });
 
@@ -101,5 +101,23 @@ function diament(x, y) {
     glob_y + 100 + 30
   );
   svg.appendChild(line);
+  glob_y = glob_y + 130;
+}
+
+const buttonik2 = document.getElementById("button2");
+buttonik2.addEventListener("click", () => {
+  elipsa_end(glob_x, glob_y);
+});
+
+function elipsa_end(x, y) {
+  //elipsa
+  const elipsa = roughsvg.ellipse(glob_x + 150, glob_y + 50, 300, 100, {
+    fill: "red",
+    fillStyle: "solid",
+  });
+  elipsa.addEventListener("click", () => {
+    console.log("klik elipsy!");
+  });
+  svg.appendChild(elipsa);
   glob_y = glob_y + 130;
 }
